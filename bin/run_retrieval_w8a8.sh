@@ -1,5 +1,6 @@
 #!/bin/bash
 #SBATCH -p g24
+#SBATCH --account=gts-smukhopadhyay6-ece
 #SBATCH --gres=gpu:1
 #SBATCH -c 14
 #SBATCH -t 24:00:00
