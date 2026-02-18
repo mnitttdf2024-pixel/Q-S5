@@ -5,11 +5,8 @@
 #SBATCH -c 1
 #SBATCH -t 5:00:00
 
-# setup pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# setup python (use PACE module system instead of pyenv)
+module load python/3.10
 
 # activate venv
 source ./venv/bin/activate

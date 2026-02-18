@@ -91,15 +91,13 @@ done
 
 echo "Running with args: $args"
 
-# setup pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# setup python (use PACE module system instead of pyenv)
+module load python/3.10
 
 ###############################################################
 
-export WANDB_APIKEY="$(cat wandb_apikey.txt)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+export WANDB_APIKEY="$(cat "${SCRIPT_DIR}/wandb_apikey.txt" 2>/dev/null || echo '')"
 
 # activate venv
 source ./venv/bin/activate
