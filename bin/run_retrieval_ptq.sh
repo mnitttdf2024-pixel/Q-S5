@@ -7,10 +7,10 @@
 #SBATCH --qos=high
 
 source ./venv/bin/activate
-cd /home/apierro/NeuroSSMs/S5fork
+cd /storage/home/hcoda1/2/apadhy9/Documents/Q-S5/S5fork
 
 python run_qtrain.py \
-    --run_name=retrieval-fp16-ptq --checkpoint_dir=/home/apierro/NeuroSSMs/final \
+    --run_name=retrieval-fp16-ptq --checkpoint_dir=/storage/home/hcoda1/2/apadhy9/Documents/Q-S5/final \
     --mlflow_tracking_uri="http://isl-cpu1.rr.intel.com:2517/" --mlflow_experiment_id=676608297636244909 \
     --job_id=$SLURM_JOB_ID \
     --C_init=trunc_standard_normal --batchnorm=False --bidirectional=True --use_layernorm_bias=False \

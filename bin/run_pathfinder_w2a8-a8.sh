@@ -8,10 +8,10 @@
 
 source ./venv/bin/activate
 
-cd /home/apierro/NeuroSSMs/S5fork
+cd /storage/home/hcoda1/2/apadhy9/Documents/Q-S5/S5fork
 
 python run_qtrain.py \
-    --run_name=pathfinder-w2a8-a8 --checkpoint_dir=/home/apierro/NeuroSSMs/final \
+    --run_name=pathfinder-w2a8-a8 --checkpoint_dir=/storage/home/hcoda1/2/apadhy9/Documents/Q-S5/final \
     --mlflow_tracking_uri="http://isl-cpu1.rr.intel.com:2517/" --mlflow_experiment_id=458051151596686345 \
     --mlflow_run_id=4ac9f04a200548dbb2d5c644a3776531 \
     --job_id=$SLURM_JOB_ID \

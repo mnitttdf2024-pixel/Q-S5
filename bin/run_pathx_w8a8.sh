@@ -7,11 +7,11 @@
 #SBATCH --qos=high
 
 source ./venv/bin/activate
-cd /home/apierro/NeuroSSMs/S5fork
+cd /storage/home/hcoda1/2/apadhy9/Documents/Q-S5/S5fork
 
 
 python run_qtrain.py \
-    --run_name=pathx-w8a8 --checkpoint_dir=/home/apierro/NeuroSSMs/final \
+    --run_name=pathx-w8a8 --checkpoint_dir=/storage/home/hcoda1/2/apadhy9/Documents/Q-S5/final \
     --mlflow_tracking_uri="http://isl-cpu1.rr.intel.com:2517/" --mlflow_experiment_id=887581300639011956 \
     --mlflow_run_id=60cf96de4b57409093e20d2274e65e0b \
     --job_id=$SLURM_JOB_ID \

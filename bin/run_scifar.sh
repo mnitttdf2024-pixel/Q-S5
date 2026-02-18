@@ -4,7 +4,7 @@
 #SBATCH --gres=gpu:1
 #SBATCH -c 14
 #SBATCH -t 24:00:00
-#SBATCH -o /home/sabreu/NeuroSSMs/logs/slurm-%j.out
+#SBATCH -o /storage/home/hcoda1/2/apadhy9/Documents/Q-S5/logs/slurm-%j.out
 
 # NOTE: for quantized runs take ~6x as long as non-quantized
 
@@ -20,7 +20,7 @@ qgelu_approx="False"
 hard_sigmoid="False"
 batchnorm="True"
 run_name=None
-checkpoint_dir="${HOME}/NeuroSSMs/checkpoints"
+checkpoint_dir="/storage/home/hcoda1/2/apadhy9/Documents/Q-S5/checkpoints"
 
 # Parse arguments
 for i in "$@"
@@ -105,7 +105,7 @@ export WANDB_APIKEY="$(cat wandb_apikey.txt)"
 source ./venv/bin/activate
 
 # enter the right directory
-cd /home/sabreu/NeuroSSMs/S5fork
+cd /storage/home/hcoda1/2/apadhy9/Documents/Q-S5/S5fork
 
 # run the script
 # d_model           H: dims for input/output features
