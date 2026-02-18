@@ -2,7 +2,7 @@
 #SBATCH -p gpu
 #SBATCH --account=gts-smukhopadhyay6-ece
 #SBATCH --gres=gpu:1
-#SBATCH -c 14
+#SBATCH -c 12
 #SBATCH -t 24:00:00
 #SBATCH -o /storage/home/hcoda1/2/apadhy9/Documents/Q-S5/logs/slurm-%j.out
 
